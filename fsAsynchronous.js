@@ -1,6 +1,6 @@
 const {readFile, writeFile} = require('fs')
 console.log('Start');
-​
+
 readFile('./FSModuleFiles/firstFile.txt', 'utf-8' , (error , data) => {
     if(error)
     {
@@ -8,8 +8,8 @@ readFile('./FSModuleFiles/firstFile.txt', 'utf-8' , (error , data) => {
     }
     const firstFile = data
     console.log('Variable Assigned 1');
-​
-​
+
+
     writeFile('./FSModuleFiles/firstWrittenAndAsyncFile.txt' , `First written async file : ${firstFile}`, (error, data) => {
         if(error)
         {
@@ -18,7 +18,7 @@ readFile('./FSModuleFiles/firstFile.txt', 'utf-8' , (error , data) => {
         console.log('Task Completed 1');
     })
 })
-​
+
 console.log('Started new Task 1');
 console.log('End 1');
 ​
